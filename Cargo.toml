@@ -1,6 +1,6 @@
 [workspace]
 members = ["crates/specs", "crates/zkwasm", "crates/cli", "crates/host"]
-exclude = ["third-party/wasmi", "crates/playground"]
+exclude = ["third-party/wasmi", "crates/playground", "serde-test"]
 resolver = "2"
 
 [workspace.dependencies]
@@ -18,4 +18,3 @@ poseidon = { git = "https://github.com/DelphinusLab/poseidon" }
 
 [profile.dev]
 opt-level = 3
-
