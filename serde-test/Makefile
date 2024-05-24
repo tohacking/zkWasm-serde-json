@@ -5,9 +5,9 @@ build:
 	wasm-pack build --release --out-name $(OUT_NAME) --out-dir pkg
 
 setup:
-	../target/debug/zkwasm-cli --params "./params" wasm_output setup --wasm pkg/gameplay_bg.wasm
+	RUST_BACKTRACE=FULL_TRACE ../target/debug/zkwasm-cli --params "./params" wasm_output setup --wasm pkg/gameplay_bg.wasm
 
-dry-run: build
+dry-run: build setup
 	sh dry-run.sh
 
 clean:
